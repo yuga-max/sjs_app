@@ -1,0 +1,36 @@
+<h3>スケジュール変更</h3>
+
+<% if flash.now[:notice] %>
+      <p class="notice"><%= flash.now[:notice] %></p>
+<% end %>
+ 
+    <%= form_with model: @sj do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :name ,"名前" %></th>
+          <td><%= f.text_field :name %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :title ,"タイトル" %></th>
+          <td><%= f.text_field :title %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :startday ,"開始日" %></th>
+          <td><%= f.text_field :startday %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :finishday ,"終了日" %></th>
+          <td><%= f.text_field :finishday %></td>
+        </tr>
+      </table>
+ 
+      <div>
+        <ul>
+          <li><%= f.submit "登録完了する"%></li>
+          <li><%= link_to "ユーザー情報一覧に戻る", :sjs %></li>
+        </ul>
+      </div>
+    <% end %>

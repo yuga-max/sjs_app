@@ -1,0 +1,48 @@
+<header>
+<h1>スケジュール確認アプリ</h1>
+</header>
+<h3>スケジュール一覧</h3>
+<% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>名前</th>
+      <th>タイトル</th>
+      <th>開始日</th>
+      <th>終了日</th>
+    </tr>
+  </thead>
+<tbody>
+        <% @sjs.each do |sj| %>
+          <tr>
+            <td><%= sj.id %></td>
+            <td><%= sj.name %></td>
+            <td><%= sj.title %></td>
+            <td><%= sj.startday %></td>
+            <td><%= sj.finishday %></td>
+
+            <td>
+            <%= link_to "参照", sj %>
+            </td>
+
+            <td>
+            <%= link_to "編集", [:edit, sj] %>
+            </td>
+
+            <td>
+              <%= link_to "削除", sj, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+            </td>
+            
+          </tr>
+          <% end %>
+</tbody>
+
+</table>
+
+<ul>
+<li><%= link_to "スケジュール登録", :new_sj %></li>
+</ul>

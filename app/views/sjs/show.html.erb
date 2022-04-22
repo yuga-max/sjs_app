@@ -1,0 +1,23 @@
+<h3>スケジュール詳細</h3>
+    <table>
+      <tr>
+        <th>名前</th>
+        <td><%= @sj.name %></td>
+      </tr>
+      <tr>
+        <th>タイトル</th>
+        <td><%= @sj.title %></td>
+      </tr>
+      <tr>
+        <th>開始日</th>
+        <td><%= @sj.startday %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @sj.finishday %></td>
+      </tr>
+    </table>
+
+    <ul>
+    <li><%= link_to "ユーザー情報一覧に戻る", :sjs %></li>
+    </ul>
