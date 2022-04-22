@@ -1,0 +1,15 @@
+current directory: /Users/watanabeyuuga/Desktop/sjs_app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/watanabeyuuga/.rbenv/versions/2.7.6/bin/ruby -I /Users/watanabeyuuga/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20220422-90489-1x3dejm.rb extconf.rb
+creating Makefile
+
+current directory: /Users/watanabeyuuga/Desktop/sjs_app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/watanabeyuuga/Desktop/sjs_app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/watanabeyuuga/Desktop/sjs_app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20220422-90489-1ulm2s0/skiptrace/internal
